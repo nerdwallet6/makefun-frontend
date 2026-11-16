@@ -3,12 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="make.fun bounties: the board, leaderboards and public profiles. Rewards paid in USDC on Solana.">
 <title>make.fun bounties</title>
 <link rel="stylesheet" href="style.css">
 <script type="module" src="main.js"></script>
 </head>
 <body>
-<header><a href="#/">make.fun bounties</a></header>
-<main id="app"></main>
+<header class="site-header">
+  <a class="brand" href="#/">make.fun <span>bounties</span></a>
+  <nav aria-label="Main">
+    <a href="#/">Board</a>
+  </nav>
+  <form id="account-search" role="search" action="#/">
+    <label class="visually-hidden" for="account-handle">Find an account by handle</label>
+    <input id="account-handle" name="handle" type="search" placeholder="Account handle, e.g. aleca" autocomplete="off" spellcheck="false">
+    <button type="submit">Find account</button>
+  </form>
+</header>
+<main id="app"><p class="loading">Loading…</p></main>
+<footer><p>Live data from the <a href="https://make.fun/api/openapi.json">make.fun public API</a>. Rewards are paid in USDC on Solana.</p></footer>
 </body>
 </html>
